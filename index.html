@@ -1,0 +1,869 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff5f7">
+<title>My Lady Maryann ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --pink: #d85c83;
+  --deep: #762d4b;
+  --rose: #f8dce6;
+  --cream: #fff8f8;
+  --gold: #c69b58;
+  --text: #38252e;
+  --muted: #947b85;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #fff5f7;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+button { font-family: inherit; cursor: pointer; }
+
+.app {
+  max-width: 480px;
+  min-height: 100vh;
+  margin: auto;
+  background: linear-gradient(180deg, #fffafa, #fff0f4);
+  position: relative;
+  padding-bottom: 105px;
+  overflow: hidden;
+}
+
+.topbar {
+  padding: 22px 22px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--deep);
+}
+
+.brand span { color: var(--pink); }
+
+.love-status {
+  background: #fbe5ec;
+  padding: 8px 12px;
+  border-radius: 30px;
+  color: var(--deep);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.section {
+  padding: 12px 21px 24px;
+  animation: appear .5s ease;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+  margin: 8px 20px 24px;
+  border-radius: 27px;
+  min-height: 420px;
+  padding: 30px 23px;
+  background:
+    linear-gradient(180deg, rgba(50,18,34,.08), rgba(50,18,34,.76)),
+    url('') center/cover,
+    linear-gradient(135deg, #edb4c7, #a94c70);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(139,58,89,.16);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "♡";
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  font-size: 100px;
+  color: rgba(255,255,255,.25);
+}
+
+.hero-tag {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: #ffe6ee;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 43px;
+  line-height: 1.12;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #fff0f4;
+  max-width: 290px;
+}
+
+.primary-btn {
+  border: none;
+  background: white;
+  color: var(--deep);
+  border-radius: 30px;
+  padding: 14px 20px;
+  margin-top: 20px;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.1);
+}
+
+.heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: var(--deep);
+  margin-bottom: 7px;
+}
+
+.subheading {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.card {
+  background: white;
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(118,45,75,.06);
+  margin-bottom: 15px;
+}
+
+.section-label {
+  color: var(--pink);
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.love-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  line-height: 1.6;
+  color: var(--deep);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.stat {
+  background: #fff;
+  border-radius: 18px;
+  padding: 17px;
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  color: var(--pink);
+}
+
+.stat small {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.upload-btn {
+  display: block;
+  width: 100%;
+  border: 1px dashed #df91aa;
+  background: #fff4f7;
+  color: var(--deep);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 12px 0 16px;
+}
+
+input[type=file] { display: none; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 11px;
+}
+
+.photo {
+  position: relative;
+  height: 185px;
+  border-radius: 17px;
+  overflow: hidden;
+  background: #f5dce5;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  background: rgba(255,255,255,.9);
+  color: #9d355b;
+}
+
+.empty-gallery {
+  grid-column: 1 / -1;
+  background: #fff5f8;
+  padding: 30px 15px;
+  border-radius: 18px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.music-card {
+  background: linear-gradient(135deg, #813c5a, #bd6888);
+  border-radius: 23px;
+  padding: 22px;
+  color: white;
+  box-shadow: 0 12px 25px rgba(118,45,75,.14);
+}
+
+.music-cover {
+  height: 150px;
+  border-radius: 17px;
+  background: linear-gradient(135deg, #e9aabe, #7c3556);
+  display: grid;
+  place-items: center;
+  font-size: 55px;
+  margin-bottom: 17px;
+}
+
+.music-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+
+.music-subtitle {
+  font-size: 11px;
+  color: #f7dce6;
+  margin-bottom: 15px;
+}
+
+audio { width: 100%; height: 38px; }
+
+.music-card .upload-btn {
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.4);
+  color: white;
+}
+
+.reasons {
+  display: grid;
+  gap: 11px;
+}
+
+.reason {
+  background: white;
+  border-radius: 17px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  box-shadow: 0 5px 15px rgba(118,45,75,.04);
+}
+
+.reason-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #fff0f4;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.reason strong {
+  font-size: 12px;
+  color: var(--deep);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.reason small {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.letter {
+  background: white;
+  padding: 25px 21px;
+  border-radius: 22px;
+  line-height: 2;
+  font-size: 13px;
+  color: #70515e;
+  box-shadow: 0 8px 25px rgba(118,45,75,.06);
+}
+
+.letter h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--deep);
+  font-size: 25px;
+  margin-bottom: 14px;
+}
+
+.signature {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: var(--pink);
+  margin-top: 18px;
+}
+
+.surprise {
+  text-align: center;
+  background: linear-gradient(145deg, #823a59, #c56d8d);
+  color: white;
+  border-radius: 24px;
+  padding: 28px 20px;
+}
+
+.surprise h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.surprise p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #ffeaf1;
+}
+
+.surprise button {
+  border: none;
+  border-radius: 30px;
+  padding: 14px 24px;
+  color: var(--deep);
+  background: white;
+  font-weight: 700;
+  margin-top: 19px;
+}
+
+.surprise-message {
+  display: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.bottom-nav {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100%, 480px);
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 8px calc(12px + env(safe-area-inset-bottom));
+  box-shadow: 0 -5px 25px rgba(118,45,75,.08);
+  border-radius: 20px 20px 0 0;
+}
+
+.nav-btn {
+  border: none;
+  background: transparent;
+  color: #a38a94;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-btn span { font-size: 20px; }
+
+.nav-btn.active { color: var(--pink); font-weight: 700; }
+
+.page { display: none; }
+.page.active { display: block; }
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  animation: floatHeart 6s linear forwards;
+  z-index: 20;
+  opacity: .8;
+}
+
+@keyframes floatHeart {
+  to { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+}
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  color: #ae929d;
+  font-size: 10px;
+}
+</style>
+</head>
+
+<body>
+<div class="app">
+
+<header class="topbar">
+  <div class="brand">MY LADY <span>♡</span></div>
+  <div class="love-status">♥ MADE WITH LOVE</div>
+</header>
+
+<!-- HOME -->
+<main id="home" class="page active">
+
+  <section class="hero">
+    <div class="hero-tag">A little world made for you</div>
+    <h1>My Lady<br>Maryann.</h1>
+    <p>
+      In a world full of beautiful things, somehow,
+      you remain my favourite.
+    </p>
+    <button class="primary-btn" onclick="showPage('letter')">
+      Open your love letter ♡
+    </button>
+  </section>
+
+  <section class="section">
+    <div class="section-label">A little reminder</div>
+    <div class="card">
+      <div class="love-quote">
+        "You are not just someone in my life.
+        You are one of the reasons my life feels beautiful."
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <strong>∞</strong>
+        <small>Reasons to love you</small>
+      </div>
+      <div class="stat">
+        <strong>♡</strong>
+        <small>My favourite person</small>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">OUR LITTLE WORLD</div>
+      <h2 class="heading">Everything about you.</h2>
+      <p class="subheading">
+        Your pictures, our music, my words and a little surprise.
+        Everything in one place.
+      </p>
+      <button class="primary-btn" onclick="showPage('gallery')"
+        style="background:#f8dce6;color:#762d4b">
+        Explore our memories →
+      </button>
+    </div>
+  </section>
+</main>
+
+<!-- GALLERY -->
+<section id="gallery" class="page section">
+  <div class="section-label">YOUR BEAUTIFUL MOMENTS</div>
+  <h2 class="heading">Our Gallery ♡</h2>
+  <p class="subheading">
+    Add your favourite pictures of Maryann from your phone.
+    This little gallery is yours to fill.
+  </p>
+
+  <div class="card">
+    <label class="upload-btn" for="photoInput">
+      ＋ ADD HER PICTURES
+    </label>
+    <input id="photoInput" type="file" accept="image/*" multiple>
+    <div id="galleryGrid" class="gallery">
+      <div class="empty-gallery">
+        ♡<br><br>
+        Your memories will appear here.<br>
+        Tap "Add her pictures" to begin.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section id="music" class="page section">
+  <div class="section-label">OUR SOUNDTRACK</div>
+  <h2 class="heading">A song for you.</h2>
+  <p class="subheading">
+    Every beautiful love story deserves a soundtrack.
+    Choose a song from your phone.
+  </p>
+
+  <div class="music-card">
+    <div class="music-cover">🎵</div>
+    <div class="music-title" id="songTitle">Our Love Song</div>
+    <div class="music-subtitle" id="songSubtitle">
+      A special song for Maryann
+    </div>
+
+    <label class="upload-btn" for="musicInput">
+      ＋ CHOOSE MY MUSIC
+    </label>
+    <input id="musicInput" type="file" accept="audio/*">
+
+    <audio id="audioPlayer" controls preload="metadata">
+      Your browser does not support audio playback.
+    </audio>
+  </div>
+
+  <div class="card" style="margin-top:17px">
+    <div class="section-label">A LITTLE NOTE</div>
+    <p class="love-quote" style="font-size:19px">
+      "If I could choose a song to describe how I feel about you,
+      I would probably need an entire playlist."
+    </p>
+  </div>
+</section>
+
+<!-- REASONS -->
+<section id="reasons" class="page section">
+  <div class="section-label">THINGS I ADMIRE</div>
+  <h2 class="heading">Why you're special.</h2>
+  <p class="subheading">
+    Some things deserve to be said more often.
+  </p>
+
+  <div class="reasons">
+    <div class="reason">
+      <div class="reason-icon">🌹</div>
+      <div>
+        <strong>Your beauty</strong>
+        <small>There's something special about the way you are.</small>
+      </div>
+    </div>
+
+    <div class="reason">
+      <div class="reason-icon">✨</div>
+      <div>
+        <strong>Your uniqueness</strong>
+        <small>There is nobody quite like you.</small>
+      </div>
+    </div>
+
+    <div class="reason">
+      <div class="reason-icon">😊</div>
+      <div>
+        <strong>Your smile</strong>
+        <small>One smile from you can make a difficult day better.</small>
+      </div>
+    </div>
+
+    <div class="reason">
+      <div class="reason-icon">💗</div>
+      <div>
+        <strong>The person you are</strong>
+        <small>I appreciate you for more than just how you look.</small>
+      </div>
+    </div>
+
+    <div class="reason">
+      <div class="reason-icon">🦋</div>
+      <div>
+        <strong>The way you make me feel</strong>
+        <small>You bring a special feeling into my life.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LETTER -->
+<section id="letter" class="page section">
+  <div class="section-label">WORDS FROM MY HEART</div>
+  <h2 class="heading">A letter for Maryann.</h2>
+  <p class="subheading">Something I want you to know.</p>
+
+  <div class="letter">
+    <h3>My dearest Maryann, ♡</h3>
+
+    I don't know if words will ever be enough to explain
+    how special you are to me, but I want to try.
+
+    <br><br>
+
+    You have a beautiful place in my heart, and I hope you
+    never forget how much you mean to me. I appreciate
+    your presence, your smile, your personality and all
+    the little things that make you who you are.
+
+    <br><br>
+
+    I may not always have the perfect words, and I may
+    not always know how to express everything I feel,
+    but I want you to know that you are appreciated.
+
+    <br><br>
+
+    I hope life gives you countless reasons to smile.
+    I hope your dreams come true, your heart stays happy,
+    and you never forget how precious you are.
+
+    <br><br>
+
+    Thank you for being you.
+
+    <div class="signature">Forever yours, ♡</div>
+  </div>
+</section>
+
+<!-- SURPRISE -->
+<section id="surprise" class="page section">
+  <div class="section-label">ONE LAST THING</div>
+  <h2 class="heading">A little surprise.</h2>
+  <p class="subheading">
+    Maryann, this one is especially for you.
+  </p>
+
+  <div class="surprise">
+    <div style="font-size:45px;margin-bottom:15px">💌</div>
+    <h3>Are you ready, my Lady?</h3>
+    <p>
+      I have one more thing to tell you.
+      Tap the button below.
+    </p>
+
+    <button onclick="revealSurprise()">
+      OPEN MY SURPRISE ♡
+    </button>
+
+    <div id="surpriseMessage" class="surprise-message">
+      Maryann, out of all the people in this world,
+      I'm grateful that our paths crossed.
+
+      <br><br>
+
+      You are special, you are appreciated,
+      and you deserve beautiful things.
+
+      <br><br>
+
+      I LOVE YOU. ❤️
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  MADE WITH LOVE, JUST FOR MARYANN ♡
+</div>
+
+<nav class="bottom-nav">
+  <button class="nav-btn active" data-page="home" onclick="showPage('home')">
+    <span>⌂</span>Home
+  </button>
+  <button class="nav-btn" data-page="gallery" onclick="showPage('gallery')">
+    <span>♡</span>Gallery
+  </button>
+  <button class="nav-btn" data-page="music" onclick="showPage('music')">
+    <span>♫</span>Music
+  </button>
+  <button class="nav-btn" data-page="reasons" onclick="showPage('reasons')">
+    <span>✧</span>Reasons
+  </button>
+  <button class="nav-btn" data-page="surprise" onclick="showPage('surprise')">
+    <span>💌</span>Surprise
+  </button>
+</nav>
+
+</div>
+
+<script>
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+  });
+
+  const selected = document.getElementById(pageId);
+  if (selected) selected.classList.add('active');
+
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.page === pageId);
+  });
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// PHOTO UPLOAD
+const photoInput = document.getElementById('photoInput');
+const galleryGrid = document.getElementById('galleryGrid');
+const photoUrls = [];
+
+photoInput.addEventListener('change', function() {
+  const files = Array.from(this.files || []);
+
+  if (!files.length) return;
+
+  const empty = galleryGrid.querySelector('.empty-gallery');
+  if (empty) empty.remove();
+
+  files.forEach(file => {
+    if (!file.type.startsWith('image/')) return;
+
+    const url = URL.createObjectURL(file);
+    photoUrls.push(url);
+
+    const photo = document.createElement('div');
+    photo.className = 'photo';
+
+    const img = document.createElement('img');
+    img.src = url;
+    img.alt = 'Maryann memory';
+
+    img.addEventListener('click', () => {
+      window.open(url, '_blank');
+    });
+
+    const remove = document.createElement('button');
+    remove.type = 'button';
+    remove.innerHTML = '×';
+    remove.setAttribute('aria-label', 'Remove picture');
+
+    remove.addEventListener('click', () => {
+      photo.remove();
+      URL.revokeObjectURL(url);
+
+      if (!galleryGrid.querySelector('.photo')) {
+        galleryGrid.innerHTML = `
+          <div class="empty-gallery">
+            ♡<br><br>
+            Your memories will appear here.<br>
+            Tap "Add her pictures" to begin.
+          </div>`;
+      }
+    });
+
+    photo.appendChild(img);
+    photo.appendChild(remove);
+    galleryGrid.appendChild(photo);
+  });
+
+  this.value = '';
+});
+
+// MUSIC UPLOAD
+const musicInput = document.getElementById('musicInput');
+const audioPlayer = document.getElementById('audioPlayer');
+let currentAudioUrl = null;
+
+musicInput.addEventListener('change', function() {
+  const file = this.files && this.files[0];
+  if (!file) return;
+
+  if (!file.type.startsWith('audio/')) {
+    alert('Please choose an audio file.');
+    return;
+  }
+
+  if (currentAudioUrl) URL.revokeObjectURL(currentAudioUrl);
+
+  currentAudioUrl = URL.createObjectURL(file);
+  audioPlayer.src = currentAudioUrl;
+
+  document.getElementById('songTitle').textContent = file.name;
+  document.getElementById('songSubtitle').textContent =
+    'Your selected song for Maryann ❤️';
+
+  audioPlayer.load();
+  audioPlayer.play().catch(() => {
+    alert('Your song is ready! Tap the play button to listen.');
+  });
+
+  this.value = '';
+});
+
+// SURPRISE
+function revealSurprise() {
+  const message = document.getElementById('surpriseMessage');
+  message.style.display = 'block';
+  message.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  makeHearts();
+}
+
+// FLOATING HEARTS
+function makeHearts() {
+  const symbols = ['❤️', '💕', '♡', '💗', '💖'];
+
+  for (let i = 0; i < 15; i++) {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (15 + Math.random() * 20) + 'px';
+    heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 8500);
+  }
+}
+
+setInterval(() => {
+  if (Math.random() > 0.5) makeHearts();
+}, 9000);
+</script>
+
+</body>
+</html>
